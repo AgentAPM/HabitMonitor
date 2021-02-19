@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Notatnik nawyków</string>
+
+    <string name="AS_title">Dodaj pozycję</string>
+    <string name="ES_title">Edytuj pozycję</string>
+    <string name="ES_start">Rozpoczęcie:</string>
+    <string name="ES_end">Zakończenie:</string>
+    <string name="ES_reset">RESET</string>
+    <string name="ES_description">Opis:</string>
+</resources>

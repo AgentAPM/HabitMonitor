@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_outline"
+    android:paddingLeft="@dimen/stamp_window_outline_thickness"
+    android:paddingRight="@dimen/stamp_window_outline_thickness"
+    android:paddingBottom="@dimen/stamp_window_outline_thickness"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ES_labels"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        app:layout_constraintBottom_toTopOf="@id/ES_button_panel"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ES_title">
+
+        <TextView
+            android:id="@+id/ES_start_label"
+            style="@style/stamp_window_label"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/ES_start"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/ES_end_label"
+            style="@style/stamp_window_label"
+            android:layout_marginTop="62dp"
+            android:text="@string/ES_end"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ES_start_label" />
+
+        <Button
+            android:id="@+id/ES_reset_end"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="11dp"
+            android:background="@drawable/shape_round"
+            android:paddingLeft="0dp"
+            android:paddingTop="0dp"
+            android:paddingRight="0dp"
+            android:paddingBottom="0dp"
+            android:text="@string/ES_reset"
+            app:backgroundTint="@color/panel_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ES_end_label" />
+
+        <TextView
+            android:id="@+id/ES_description_label"
+            style="@style/stamp_window_label"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="11dp"
+            android:text="@string/ES_description"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ES_reset_end" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/ES_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/panel_color"
+        android:text="@string/ES_title"
+        android:textAlignment="center"
+        android:textColor="@color/text_color"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ES_start_date"
+        style="@style/stamp_window_TAD_field"
+        app:layout_constraintBottom_toTopOf="@+id/ES_start_time"
+        app:layout_constraintLeft_toRightOf="@id/ES_labels"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ES_title">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="48dp"
+            android:textColor="@color/panel_color"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="15.02.2021" />
+
+        <ImageView
+            style="@style/stamp_window_TAD_field_icon"
+            android:background="@drawable/shape_round"
+            android:backgroundTint="@color/panel_color"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_calendar"
+            app:tint="@color/text_color" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ES_start_time"
+        style="@style/stamp_window_TAD_field"
+        app:layout_constraintBottom_toTopOf="@+id/ES_end_date"
+        app:layout_constraintLeft_toRightOf="@id/ES_labels"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ES_start_date">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="48dp"
+            android:textColor="@color/panel_color"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="12:50:17" />
+
+
+        <ImageView
+            style="@style/stamp_window_TAD_field_icon"
+            android:background="@drawable/shape_round"
+            android:backgroundTint="@color/panel_color"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_habit_time"
+            app:tint="@color/text_color" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ES_end_date"
+        style="@style/stamp_window_TAD_field"
+        app:layout_constraintBottom_toTopOf="@+id/ES_end_time"
+        app:layout_constraintLeft_toRightOf="@id/ES_labels"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ES_start_time">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="48dp"
+            android:textColor="@color/panel_color"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="15.02.2021" />
+
+        <ImageView
+            style="@style/stamp_window_TAD_field_icon"
+            android:background="@drawable/shape_round"
+            android:backgroundTint="@color/panel_color"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_calendar"
+            app:tint="@color/text_color" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ES_end_time"
+        style="@style/stamp_window_TAD_field"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/ES_description"
+        app:layout_constraintLeft_toRightOf="@id/ES_labels"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ES_end_date">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="48dp"
+            android:textColor="@color/panel_color"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="12:50:17" />
+
+        <ImageView
+            style="@style/stamp_window_TAD_field_icon"
+            android:background="@drawable/shape_round"
+            android:backgroundTint="@color/panel_color"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_habit_time"
+            app:tint="@color/text_color" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <EditText
+        android:id="@+id/ES_description"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/stamp_window_field_height"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="4dp"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        app:layout_constraintBottom_toTopOf="@id/ES_button_panel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ES_labels"
+        app:layout_constraintTop_toBottomOf="@id/ES_end_time" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ES_button_panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ES_description">
+
+        <ImageButton
+            android:id="@+id/ES_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_round"
+            android:paddingStart="32dp"
+            android:paddingTop="4dp"
+            android:paddingEnd="32dp"
+            android:paddingBottom="4dp"
+            android:tint="@color/text_color"
+            app:backgroundTint="@color/panel_color"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/ES_save"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_back" />
+
+        <ImageButton
+            android:id="@+id/ES_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_round"
+            android:paddingStart="32dp"
+            android:paddingTop="4dp"
+            android:paddingEnd="32dp"
+            android:paddingBottom="4dp"
+            android:tint="@color/text_color"
+            app:backgroundTint="@color/panel_color"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/ES_delete"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/ES_back"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_save" />
+
+        <ImageButton
+            android:id="@+id/ES_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_round"
+            android:paddingStart="32dp"
+            android:paddingTop="4dp"
+            android:paddingEnd="32dp"
+            android:paddingBottom="4dp"
+            android:tint="@color/text_color"
+            app:backgroundTint="@color/panel_color"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/ES_save"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_delete" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

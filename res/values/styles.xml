@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="stamp_window_TAD_field">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">@dimen/stamp_window_field_height</item>
+        <item name="android:background">@drawable/shape_round_outline</item>
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:layout_marginBottom">4dp</item>
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:layout_marginEnd">8dp</item>
+    </style>
+    <style name="stamp_window_TAD_field_icon">
+        <item name="android:layout_width">64dp</item>
+        <item name="android:layout_height">@dimen/stamp_window_field_height</item>
+        <item name="android:paddingStart">8dp</item>
+        <item name="android:paddingEnd">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:paddingTop">8dp</item>
+    </style>
+    <style name="stamp_window_label">
+        <item name="android:layout_height">@dimen/stamp_window_field_height</item>
+        <item name="android:textColor">@color/panel_color</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingTop">8sp</item>
+    </style>
+</resources>
